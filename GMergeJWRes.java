@@ -6,17 +6,10 @@ package gmergeRes;
 import java.awt.EventQueue;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JButton;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
-import java.util.Scanner;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 
@@ -42,19 +35,16 @@ public class GMergeJWRes extends JFrame
 		});
 	}
 
-
 		
 public GMergeJWRes() 
 {
 	AuxF auxf = new AuxF();
-	
 	setResizable(false);
 	final JFileChooser fcORG = new JFileChooser();
 	final JFileChooser fcDEST = new JFileChooser();
 	setTitle("mergeRes");
 	setBounds(100, 100, 250, 255);
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	
 	
 	JButton btnNewButton = new JButton("Elegir directorio origen");
 	btnNewButton.setToolTipText("Seleccione la carpeta que contiene los archivos a procesar.");
@@ -66,7 +56,6 @@ public GMergeJWRes()
 			  fcORG.showOpenDialog(fcORG.getParent());				  
 		}
 	}); 			
-
 	
 	JButton btnNewButton_1 = new JButton("Elegir directorio destino");
 	btnNewButton_1.setToolTipText("Seleccione la carpeta en la que se guardará el archivo resultado.");
@@ -78,13 +67,11 @@ public GMergeJWRes()
 			fcDEST.showOpenDialog(fcDEST.getParent());				  		
 		}
 	});
-
 	
 	JButton btnCombinarArchivos = new JButton("Combinar archivos");
 	btnCombinarArchivos.setToolTipText("Copiar las partes de todos los archivos .dat y .cd.res del directorio origen a uno solo.");
 	GroupLayout groupLayout = new GroupLayout(getContentPane());
 	
-
 	
 	getContentPane().setLayout(groupLayout);
 	btnCombinarArchivos.addActionListener(new ActionListener()
@@ -104,6 +91,7 @@ public GMergeJWRes()
 			}
 		 }
 	 });
+
 	
 	groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
