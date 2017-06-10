@@ -78,6 +78,7 @@ public class AuxF {
 	}
 	
 	public void extractTargetLines(PrintStream prinFile, String file, String q1) {
+	//Extract only the lines of the results.
 		Scanner scanFile = null;
 		try 
 		{
